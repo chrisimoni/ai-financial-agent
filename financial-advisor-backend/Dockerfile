@@ -13,7 +13,7 @@ RUN mvn clean package -DskipTests
 
 # Runtime stage
 FROM openjdk:17-jdk-slim
-ARG APP_VERSION=1.0.0
+ARG APP_VERSION=0.0.1-SNAPSHOT
 
 ENV JAR_VERSION=${APP_VERSION}
 ENV JAVA_OPTS="-Djava.awt.headless=true"
@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /build/target/financial-advisor-backend-*.jar /app/
+COPY --from=build /build/target/financial-advisor-backend-*.jar /app/app.jar
 
 EXPOSE 8085
 
 # Specify the command to run your application
-CMD java -jar financial-advisor-backend-${JAR_VERSION}.jar
+CMD java ${JAVA_OPTS} -jar app.jar
