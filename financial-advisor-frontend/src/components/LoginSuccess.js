@@ -9,7 +9,7 @@ const LoginSuccess = ({ onLogin }) => {
   const hasProcessed = useRef(false); // Prevent multiple processing
 
   useEffect(() => {
-    // Prevent multiple executions
+    // Prevent multiple executionsF
     if (hasProcessed.current) {
       return;
     }
