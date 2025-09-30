@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = 'https://ai-financial-agent.onrender.com';
+const API_BASE_URL = "http://localhost:8085";
 
 class ApiService {
   constructor() {
