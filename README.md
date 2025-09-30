@@ -114,7 +114,7 @@ financial-advisor-agent/
 - **Frontend**: React 18, TailwindCSS, Axios, WebSocket
 - **Database**: PostgreSQL with pgvector extension
 - **AI**: OpenAI GPT-4, Spring AI Framework
-- **Deployment**: Render/Fly.io for frontend app & Heroku for backend app
+- **Deployment**: Render for backend app & Vercel for frontend app
 
 ## Quick Start
 
@@ -137,6 +137,7 @@ GOOGLE_CLIENT_SECRET=your_google_client_secret
 # HubSpot
 HUBSPOT_CLIENT_ID=your_hubspot_client_id
 HUBSPOT_CLIENT_SECRET=your_hubspot_client_secret
+HUBSPOT_REDIRECT_URI=your_hubspot_redirect_url
 
 # Database
 DATABASE_URL=postgresql://localhost:5432/advisor_agent
@@ -149,8 +150,9 @@ JWT_SECRET=your_jwt_secret_key
 
 ## Deployment
 
-The application is configured for deployment on both Render and Fly.io with proper configuration files included.
+The application is configured for deployment on both Render and Vercel with proper configuration files included.
 
 ## Next Steps
 
 Start both applications and enjoy the amazing features it has.
+Note that the backend application may take few minutes to start as we're current using render free-tier plan
