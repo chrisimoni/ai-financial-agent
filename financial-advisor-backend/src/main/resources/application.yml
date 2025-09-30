@@ -36,7 +36,7 @@ spring:
               - https://www.googleapis.com/auth/gmail.send
               - https://www.googleapis.com/auth/calendar
               - https://www.googleapis.com/auth/calendar.events
-            redirect-uri: "https://ai-financial-agent.onrender.com/login/oauth2/code/google"
+            redirect-uri: https://ai-financial-agent.onrender.com/login/oauth2/code/google
             authorization-grant-type: authorization_code
         provider:
           google:
