@@ -31,7 +31,7 @@ const LoginSuccess = ({ onLogin }) => {
           throw new Error("No authentication token available");
         }
 
-        const response = await fetch("http://localhost:8085/auth/hubspot", {
+        const response = await fetch("https://ai-financial-agent.onrender.com/auth/hubspot", {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
