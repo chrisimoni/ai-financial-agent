@@ -29,7 +29,7 @@ const HubSpotCallback = ({ onLogin }) => {
         }
 
         // Send code to backend via authenticated API call
-        const response = await fetch("/auth/hubspot/callback", {
+        const response = await fetch("https://ai-financial-agent.onrender.com/auth/hubspot/callback", {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

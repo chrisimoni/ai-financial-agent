@@ -8,7 +8,7 @@ const Login = ({ onLogin }) => {
   const handleGoogleLogin = () => {
     setIsLoading(true);
     // Redirect to backend OAuth endpoint
-    window.location.href = `${process.env.REACT_APP_API_URL}/oauth2/authorization/google`;
+    window.location.href = `https://ai-financial-agent.onrender.com/oauth2/authorization/google`;
   };
 
   return (
