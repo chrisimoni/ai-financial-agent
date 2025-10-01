@@ -29,14 +29,17 @@ const HubSpotCallback = ({ onLogin }) => {
         }
 
         // Send code to backend via authenticated API call
-        const response = await fetch("https://ai-financial-agent.onrender.com/auth/hubspot/callback", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ code }),
-        });
+        const response = await fetch(
+          "https://ai-financial-agent-vq2w.onrender.com/auth/hubspot/callback",
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ code }),
+          }
+        );
 
         const data = await response.json();
 

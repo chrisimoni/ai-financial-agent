@@ -51,7 +51,7 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
             // Start RAG indexing in background
             try {
-                ragService.performFullIndexing(user);
+                //ragService.performFullIndexing(user);
             } catch (Exception e) {
                 log.error("Failed to start RAG indexing {} ", e.getMessage());
             }

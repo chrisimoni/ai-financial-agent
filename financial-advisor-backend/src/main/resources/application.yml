@@ -94,24 +94,3 @@ logging:
   level:
     com.advisor: INFO
     root: INFO
-
----
-spring:
-  config:
-    activate:
-      on-profile: heroku
-
-  datasource:
-    url: ${DATABASE_URL}
-
-  jpa:
-    hibernate:
-      ddl-auto: validate
-    show-sql: false
-
-server:
-  port: ${PORT}
-
-logging:
-  level:
-    com.advisor: INFO

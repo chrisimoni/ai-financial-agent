@@ -31,11 +31,14 @@ const LoginSuccess = ({ onLogin }) => {
           throw new Error("No authentication token available");
         }
 
-        const response = await fetch("https://ai-financial-agent.onrender.com/auth/hubspot", {
-          headers: {
-            Authorization: `Bearer ${authToken}`,
-          },
-        });
+        const response = await fetch(
+          "https://ai-financial-agent-vq2w.onrender.com/auth/hubspot",
+          {
+            headers: {
+              Authorization: `Bearer ${authToken}`,
+            },
+          }
+        );
 
         const data = await response.json();
 

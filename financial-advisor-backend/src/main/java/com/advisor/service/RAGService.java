@@ -51,13 +51,13 @@ public class RAGService {
      */
     public void indexEmails(User user) {
         try {
-            System.out.println("Starting email indexing for user: " + user.getEmail());
+            //System.out.println("Starting email indexing for user: " + user.getEmail());
 
             // Get emails as documents from Gmail service
             List<Document> emailDocuments = gmailService.getEmailsAsDocuments(user);
 
             if (emailDocuments.isEmpty()) {
-                System.out.println("No emails found to index for user: " + user.getEmail());
+                //System.out.println("No emails found to index for user: " + user.getEmail());
                 // Add sample data for testing
                 addSampleEmailData(user);
                 return;
