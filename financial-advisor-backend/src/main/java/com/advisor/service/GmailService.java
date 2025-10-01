@@ -133,7 +133,7 @@ public class GmailService {
                 "type", "email",
                 "from", emailEntity.getFromEmail(),
                 "subject", emailEntity.getSubject(),
-                "date", emailEntity.getReceivedAt().toString(),
+                "date", emailEntity.getReceivedAt() != null ? emailEntity.getReceivedAt().toString() : LocalDateTime.now().toString(),
                 "userId", emailEntity.getUser().getId().toString(),
                 "gmailId", emailEntity.getGmailId()
         );
